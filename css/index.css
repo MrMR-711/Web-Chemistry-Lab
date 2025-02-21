@@ -73,14 +73,12 @@ position: relative;
    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 .light-theme {
-    background-color: #ffffff !important;
+    background-color: #e2e2e2 !important;
     color: #000000 !important;
 }
+
 .light-theme .container {
-    background: #e0e0e0 !important;
-}
-.light-theme .back-button {
-    color: rgb(0, 0, 0) !important;
+    background: #c7c7c7 !important;
 }
 .light-theme .main-button a {
     color: #2b2b2b !important;
