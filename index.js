@@ -53,3 +53,8 @@ self.addEventListener('install', (event) => {
       })
     );
   });
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => console.log("Service Worker ثبت شد."))
+    .catch(err => console.error("خطا در ثبت Service Worker:", err));
+}
