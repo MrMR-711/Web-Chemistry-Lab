@@ -1,5 +1,5 @@
 function goBack() {
-    window.location.href = "../index.html";
+    window.location.href = "https://mrmr-711.github.io/Web-Chemistry-Lab";
 }
 
 document.getElementById("search-box").addEventListener("blur", function () {
