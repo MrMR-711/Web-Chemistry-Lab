@@ -30,7 +30,7 @@ document.getElementById("theme-toggle").addEventListener("change", function() {
 });
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
+  navigator.serviceWorker.register('sw.js')
     .then(() => console.log("Service Worker ثبت شد."))
     .catch(err => console.error("خطا در ثبت Service Worker:", err));
 }
