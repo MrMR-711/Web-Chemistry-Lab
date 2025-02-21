@@ -1440,20 +1440,23 @@ function drawAtomModel(protons, neutrons, electrons) {
 
 function searchElement() {
     const query = searchBox.value.trim().toLowerCase();
+
     for (const [atomicNumber, element] of Object.entries(elements)) {
         const elementNameLower = element.name.toLowerCase();
         const elementSymbolLower = element.symbol.toLowerCase();
 
-        if (elementNameLower.includes(query) || elementSymbolLower.includes(query) || atomicNumber === query) {
+        if (
+            atomicNumber === query || 
+            elementSymbolLower === query ||  // بررسی دقیق نماد شیمیایی
+            elementNameLower.startsWith(query)
+        ) {
             protonSlider.value = atomicNumber;
             neutronSlider.value = element.requiredNeutrons;
             electronSlider.value = element.requiredElectrons;
 
-            // به‌روزرسانی دستی مقدار اینپوت‌ها بعد از تغییر اسلایدرها:
             document.getElementById("proton-input").value = atomicNumber;
             document.getElementById("neutron-input").value = element.requiredNeutrons;
             document.getElementById("electron-input").value = element.requiredElectrons;
-
 
             updateElement();
             break;
@@ -1468,33 +1471,27 @@ searchBox.addEventListener("input", searchElement);
 
 updateElement();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    const isLightTheme = savedTheme === "light";
+function applyTheme(theme) {
+  const isLightTheme = theme === "light";
+  document.body.classList.toggle("light-theme", isLightTheme);
+  
+  const color = isLightTheme ? "#e2e2e2" : "#0f172a"; // رنگ برای حالت روز و شب
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+  document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", theme === "dark" ? "black-translucent" : "default");
+  document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", color);
+  document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", color);
+}
 
-    document.body.classList.toggle("light-theme", isLightTheme);
-    document.getElementById("theme-toggle").checked = savedTheme === "dark";
+// اجرا هنگام بارگذاری صفحه برای اطمینان از اینکه Title Bar همیشه هماهنگ است
+function loadTheme() {
+  let savedTheme = localStorage.getItem("theme") || "dark";
+  applyTheme(savedTheme);
+}
 
-    // تنظیم رنگ اولیه برای متا تگها
-    const initialColor = isLightTheme ? "#e2e2e2" : "#0f172a"; // رنگ جدید برای حالت روز
-    document.querySelector('meta[name="theme-color"]').setAttribute("content", initialColor);
-    document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", savedTheme === "dark" ? "black-translucent" : "default");
-    document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", initialColor);
-    document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", initialColor);
-});
-
-document.getElementById("theme-toggle").addEventListener("change", function () {
-    const newTheme = this.checked ? "dark" : "light";
-    localStorage.setItem("theme", newTheme);
-    document.body.classList.toggle("light-theme", newTheme === "light");
-
-    // تغییر متا تگها
-    const color = newTheme === "light" ? "#e2e2e2" : "#0f172a"; // رنگ جدید برای حالت روز
-    // آپدیت theme-color برای مرورگرهای معمولی و PWA
-    document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
-    // آپدیت برای مرورگرهای اپل (Safari)
-    document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", newTheme === "dark" ? "black-translucent" : "default");
-    // آپدیت برای مرورگرهای مایکروسافت (Edge)
-    document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", color);
-    document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", color);
+// اجرا هنگام بارگذاری هر صفحه
+document.addEventListener("DOMContentLoaded", loadTheme);
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) { // اگر صفحه از کش لود شده بود، دوباره تم را اعمال کن
+      loadTheme();
+  }
 });
