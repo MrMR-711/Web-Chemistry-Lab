@@ -1,2 +1,2 @@
-# Web-Chemistry-Lab
+# Chemistry-Lab (webApp)
 Chemistry Lab webApp
