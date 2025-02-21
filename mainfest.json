@@ -1,0 +1,23 @@
+{
+    "name": "آزمایشگاه شیمی",
+    "short_name": "",
+    "description": ".",
+    "lang": "fa",
+    "dir": "rtl",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "icons": [
+      {
+        "src": "Chemistry-Lab-icon-192x192png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "Chemistry-Lab-icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
