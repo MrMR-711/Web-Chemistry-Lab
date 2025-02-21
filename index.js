@@ -29,30 +29,6 @@ document.getElementById("theme-toggle").addEventListener("change", function() {
   document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", color);
 });
 
-// کش کردن منابع در زمان نصب
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-      caches.open('v1').then((cache) => {
-        return cache.addAll([
-          '/',
-          '/index.html',
-          '/css/index.css',
-          '/index.js',
-          '/icon-192.png',
-          '/icon-512.png'
-        ]);
-      })
-    );
-  });
-  
-  // پاسخ به درخواستها از کش یا شبکه
-  self.addEventListener('fetch', (event) => {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        return response || fetch(event.request);
-      })
-    );
-  });
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
     .then(() => console.log("Service Worker ثبت شد."))
