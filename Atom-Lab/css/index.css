@@ -372,15 +372,15 @@ input[type="text"]:focus {
 }
 
 .light-theme .proton {
-    background-color: #e60000 !important;
-    opacity: 0.6 !important;
-    box-shadow: 0 0 7px rgba(230, 0, 0, 0.4) !important;
+    background-color: #d30000 !important;
+    opacity: 0.7 !important;
+    box-shadow: 0 0 7px rgba(211, 0, 0, 0.6) !important;
 }
 
 .light-theme .neutron {
-    background-color: #dbbe4a !important;
-    opacity: 0.5 !important;
-    box-shadow: 0 0 7px rgba(219, 190, 74, 0.6) !important;
+    background-color: #ac9331 !important;
+    opacity: 0.6 !important;
+    box-shadow: 0 0 7px rgba(172, 147, 49, 0.6) !important;
 }
 
 .light-theme .element-info {
