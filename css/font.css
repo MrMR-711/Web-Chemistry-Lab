@@ -13,3 +13,11 @@
     font-style: normal;
 	font-display: fallback;
 }
+
+@font-face {
+    font-family: 'Vazir-Medium';
+    src: url('assets/fonts/Vazir-Medium.woff2') format('woff2'),
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback;
+}
