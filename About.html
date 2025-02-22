@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="theme-color" content="#0f172a">
     <link rel="manifest" href="manifest.json">
     <link type="text/css" rel="stylesheet" href="css/font.css">
@@ -102,7 +102,13 @@
             direction: rtl;
             text-align-last: right;
             word-spacing: -1px;
-            /* راست‌چین کردن متن پاراگراف‌ها */
+            font-feature-settings: "liga" 1; /* فعالسازی لیگاچرها */
+            text-rendering: optimizeLegibility;
+            letter-spacing: 0 !important;
+            -webkit-font-smoothing: antialiased; /* بهبود نمایش فونت در وبکیت */
+            -moz-osx-font-smoothing: grayscale;
+            word-break: normal !important; /* غیرفعال کردن شکستن کلمات */
+            hyphens: none !important;
         }
 
         .link {
