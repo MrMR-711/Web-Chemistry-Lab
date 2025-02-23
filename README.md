@@ -1,5 +1,5 @@
 <details>
-<summary> 🇮🇷 نسخه فارسی </summary>
+<summary> 🇮🇷 فارسی </summary>
 
 # آزمایشگاه شیمی 🔬
 
@@ -37,7 +37,7 @@
 </details>
 
 <details open>
-<summary> 🇺🇸 English Version </summary>
+<summary> 🇺🇸 English </summary>
 
 # Chemistry Lab 🔬
 
