@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'GraphikArabic';
+    src: url('assets/fonts/GraphikArabic-Bold.woff2') format('woff2'),
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Estedad-MDarvishi';
+    src: url('assets/fonts/Estedad-Mad.woff2') format('woff2'),
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url('assets/fonts/Vazir-Bold.woff2') format('woff2'),
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Proza';
+    src: url('assets/fonts/Proza-Black.woff2') format('woff2'),
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback;
+}
