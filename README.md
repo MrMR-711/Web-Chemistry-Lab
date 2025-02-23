@@ -60,7 +60,7 @@ With a few simple clicks, you can:
 
 ## 🚀 Project Goal
 
-This project is the result of the effort and passion of two students interested in chemistry, **Mohammad Rashno and Hamidreza Sepahvand**. We have created this virtual laboratory with the aim of **facilitating the learning of chemistry concepts** for students and science enthusiasts. We hope the Element Lab can open a new window into the fascinating and complex world of elements for you and provide a pleasant and educational experience. 🌍🔬
+This project is the result of the effort and passion of two students interested in chemistry, **Mohammad Rashnou and Hamidreza Sepahvand**. We have created this virtual laboratory with the aim of **facilitating the learning of chemistry concepts** for students and science enthusiasts. We hope the Element Lab can open a new window into the fascinating and complex world of elements for you and provide a pleasant and educational experience. 🌍🔬
 
 ## 🌐 Web-App Access
 
@@ -75,7 +75,7 @@ This project is released under the **MIT License**. Use and participation in its
 
 If you have any questions or suggestions, please contact us:
 
-  - **Mohammad Rashno**: [Telegram](https://t.me/MrMR_711)
+  - **Mohammad Rashnou**: [Telegram](https://t.me/MrMR_711)
   - **Hamidreza Sepahvand**: [Telegram](https://t.me/Sep2x)
 
 Thank you for choosing **Chemistry Lab** to explore the world of chemistry! 💡🔬
