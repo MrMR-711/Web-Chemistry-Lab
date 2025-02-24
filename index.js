@@ -45,16 +45,3 @@ if ('serviceWorker' in navigator) {
     .then(() => console.log("Service Worker ثبت شد."))
     .catch(err => console.error("خطا در ثبت Service Worker:", err));
 }
-
-// چک کردن زبان ذخیره شده هنگام لود اولیه
-document.addEventListener('DOMContentLoaded', function() {
-  const preferredLang = localStorage.getItem('preferredLang');
-  const currentPath = window.location.pathname;
-
-  if(preferredLang === 'fa' && !currentPath.includes('./fa')) {
-    window.location.replace('./Fa');
-  }
-  else if(preferredLang === 'en' && currentPath.includes('./')) {
-    window.location.replace('./');
-  }
-});

@@ -269,43 +269,12 @@ limitations under the License.
                 .catch(err => console.error("خطا در ثبت Service Worker:", err));
         }
 
-        // 1. تنظیمات اولیه هنگام لود صفحه
-        document.addEventListener('DOMContentLoaded', function () {
-            // بررسی زبان ذخیره شده
-            const preferredLang = localStorage.getItem('preferredLang') || 'en';
-            const currentPath = window.location.pathname;
-
-            // تنظیم ویژگیهای HTML
-            document.documentElement.lang = preferredLang;
-            document.documentElement.dir = preferredLang === 'fa' ? 'rtl' : 'ltr';
-
-            // ریدایرکت در صورت نیاز
-            if (preferredLang === 'fa' && !currentPath.includes('/Fa/')) {
-                window.location.href = './Fa/settings';
-            } else if (preferredLang === 'en' && currentPath.includes('/Fa/')) {
-                window.location.href = 'settings';
-            }
-        });
-
-        // 2. هندلر تغییر زبان
         document.getElementById('language-select').addEventListener('change', function () {
-            const selectedValue = this.value;
-
-            // ذخیره انتخاب کاربر
-            localStorage.setItem('preferredLang', selectedValue);
-
-            // به روزرسانی ویژگیهای HTML
-            document.documentElement.lang = selectedValue;
-            document.documentElement.dir = selectedValue === 'fa' ? 'rtl' : 'ltr';
-
-            // ریدایرکت با توجه به زبان
+            var selectedValue = this.value;
             if (selectedValue === 'en') {
-                window.location.href = window.location.pathname.replace('/Fa/', '/');
-            } else {
-                const newPath = window.location.pathname.includes('/Fa/')
-                    ? window.location.pathname
-                    : window.location.pathname.replace(/(\/[^\/]*)$/, '/Fa$1');
-                window.location.href = newPath;
+                window.location.href = 'settings'; // ریدایرکت به صفحه تنظیمات انگلیسی
+            } else if (selectedValue === 'fa') {
+                window.location.href = './Fa/settings'; // ریدایرکت به صفحه تنظیمات فارسی
             }
         });
     </script>
