@@ -1,5 +1,5 @@
 function goBack() {
-    window.location.href = "../../Fa/index";
+    window.location.href = "../../Fa/";
 }
 
 document.getElementById("search-box").addEventListener("blur", function () {

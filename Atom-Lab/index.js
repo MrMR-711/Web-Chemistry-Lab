@@ -16,7 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 function goBack() {
-    window.location.href = "../index";
+    window.location.href = "../";
 }
 
 document.getElementById("search-box").addEventListener("blur", function () {
