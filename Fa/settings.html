@@ -269,14 +269,15 @@ limitations under the License.
                 .catch(err => console.error("خطا در ثبت Service Worker:", err));
         }
 
-        document.getElementById('language-select').addEventListener('change', function () {
-            var selectedValue = this.value;
-            if (selectedValue === 'en') {
-                window.location.href = '../settings'; // ریدایرکت به صفحه تنظیمات انگلیسی
-            } else if (selectedValue === 'fa') {
-                window.location.href = 'settings'; // ریدایرکت به صفحه تنظیمات فارسی
-            }
-        });
+document.getElementById('language-select').addEventListener('change', function () {
+    var selectedValue = this.value;
+    localStorage.setItem('language', selectedValue); // ذخیره زبان انتخابی
+    if (selectedValue === 'en') {
+        window.location.href = '../settings'; 
+    } else if (selectedValue === 'fa') {
+        window.location.href = 'settings'; 
+    }
+});
     </script>
 </body>
 

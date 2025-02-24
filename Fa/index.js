@@ -48,8 +48,8 @@ if ('serviceWorker' in navigator) {
 
 document.addEventListener('DOMContentLoaded', function () {
     var savedLang = localStorage.getItem('language');
-    if (savedLang === 'fa') {
-        window.location.href = './Fa';
+    if (savedLang === 'en') {
+        window.location.href = '../';
     }
 });
 
