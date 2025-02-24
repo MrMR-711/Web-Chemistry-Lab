@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if(preferredLang === 'fa' && !currentPath.includes('./fa')) {
     window.location.replace('./Fa');
   }
-  else if(preferredLang === 'en' && currentPath.includes('./fa')) {
+  else if(preferredLang === 'en' && currentPath.includes('./')) {
     window.location.replace('./');
   }
 });
