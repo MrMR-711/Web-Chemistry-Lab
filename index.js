@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const preferredLang = localStorage.getItem('preferredLang');
   const currentPath = window.location.pathname;
 
-  if(preferredLang === 'fa' && !currentPath.includes('/fa')) {
-    window.location.replace('/Fa');
+  if(preferredLang === 'fa' && !currentPath.includes('./fa')) {
+    window.location.replace('./Fa');
   }
-  else if(preferredLang === 'en' && currentPath.includes('/fa')) {
-    window.location.replace('/');
+  else if(preferredLang === 'en' && currentPath.includes('./fa')) {
+    window.location.replace('./');
   }
 });
