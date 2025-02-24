@@ -1,0 +1,284 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information regarding
+copyright ownership. The ASF licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="manifest" href="../manifest.json">
+    <link type="text/css" rel="stylesheet" href="../css/font.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-navbutton-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <link rel="icon" href="../settings.png" type="image/png">
+    <title>تنظیمات</title>
+    <style>
+        body {
+            font-family: 'GraphikArabic', sans-serif;
+            text-align: center;
+            background-color: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container h1 {
+            font-family: 'Estedad-MDarvishi', sans-serif;
+            font-size: 50px;
+            text-shadow: 0 6px 8px rgb(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('../css/assets/back-button.png');
+            background-color: #1e293b;
+            background-size: cover;
+            text-decoration: none;
+            display: inline-block;
+            top: 20px;
+            left: 25px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 100px;
+        }
+
+        .setting-item {
+            margin: 20px 0;
+            font-family: 'GraphikArabic', sans-serif;
+            text-align: center;
+        }
+
+        label {
+            font-family: 'GraphikArabic', sans-serif;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        select {
+            font-family: 'GraphikArabic', sans-serif;
+            position: relative;
+            display: inline-block;
+            width: 70px;
+            height: 30px;
+            color: white;
+            background-color: #055be6;
+            border: 2px solid #0043af;
+            border-radius: 7px;
+            margin-bottom: 560px;
+        }
+
+        select option {
+            font-family: 'GraphikArabic', sans-serif;
+            color: white;
+            background-color: #1e293b;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #055be6;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .light-theme {
+            background-color: #e2e2e2 !important;
+            color: #000000 !important;
+        }
+
+        .light-theme .container {
+            background: #c7c7c7 !important;
+        }
+
+        .light-theme .back-button {
+            background-image: url(../css/assets/back-buttonB.png) !important;
+            background-color: #c7c7c7 !important;
+        }
+
+        .light-theme .back-button {
+            color: rgb(0, 0, 0) !important;
+        }
+
+        .light-theme .slider {
+            position: absolute !important;
+            background-color: #adadad !important;
+        }
+
+        .light-theme .setting-item select {
+            color: #2b2b2b !important;
+            background-color: #26a4da !important;
+            border: 2px solid #1b8bbb !important;
+        }
+
+        .light-theme .setting-item select option {
+            color: #2b2b2b !important;
+            background-color: #c7c7c7 !important;
+        }
+
+        .light-theme input:checked+.light-theme .slider {
+            background-color: #26a4da !important;
+        }
+
+        .light-theme input:checked+.light-theme .slider:before {
+            transform: translateX(26px) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()"></button>
+        <h1>تنظیمات</h1>
+        <div class="setting-item">
+            <label for="theme-toggle">حالت شب:</label>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <label for="language-select">زبان:</label>
+            <label class="setting-item. label"></label>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="fa">فارسی</option>
+                <option value="en">انگلیسی</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = "index";
+        }
+
+        function applyTheme(theme) {
+            const isLightTheme = theme === "light";
+            document.body.classList.toggle("light-theme", isLightTheme);
+
+            const color = isLightTheme ? "#e2e2e2" : "#0f172a"; // رنگ جدید برای حالت روز یا شب
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+            document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", theme === "dark" ? "black-translucent" : "default");
+            document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", color);
+            document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", color);
+        }
+
+        // برای لود اولیه و همچنین زمانی که از دکمه برگشت استفاده می‌شود
+        function loadTheme() {
+            let savedTheme = localStorage.getItem("theme");
+
+            // اگر مقدار ذخیره‌شده در لوکال‌استوریج نبود، حالت پیش‌فرض "dark" باشد
+            if (!savedTheme) {
+                savedTheme = "dark";
+                localStorage.setItem("theme", savedTheme);
+            }
+
+            applyTheme(savedTheme);
+            document.getElementById("theme-toggle").checked = savedTheme === "dark";
+        }
+
+        // اجرا هنگام بارگذاری صفحه
+        document.addEventListener("DOMContentLoaded", loadTheme);
+
+        // اجرا هنگام بازگشت به صفحه (برای حل مشکل کش در دکمه برگشت گوشی)
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) { // یعنی صفحه از کش لود شده
+                loadTheme();
+            }
+        });
+
+        // تغییر تم با سوئیچ
+        document.getElementById("theme-toggle").addEventListener("change", function () {
+            const newTheme = this.checked ? "dark" : "light";
+            applyTheme(newTheme);
+            localStorage.setItem("theme", newTheme);
+        });
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../sw.js')
+                .then(() => console.log("Service Worker ثبت شد."))
+                .catch(err => console.error("خطا در ثبت Service Worker:", err));
+        }
+
+
+        document.getElementById('language-select').addEventListener('change', function () {
+            var selectedValue = this.value;
+            if (selectedValue === 'en') {
+                window.location.href = '../settings'; // ریدایرکت به صفحه تنظیمات انگلیسی
+            } else if (selectedValue === 'fa') {
+                window.location.href = 'settings'; // ریدایرکت به صفحه تنظیمات فارسی
+            }
+        });
+    </script>
+</body>
+
+</html>

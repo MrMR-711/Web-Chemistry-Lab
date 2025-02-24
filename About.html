@@ -1,0 +1,241 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information regarding
+copyright ownership. The ASF licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="manifest" href="manifest.json">
+    <link type="text/css" rel="stylesheet" href="css/font.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-navbutton-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <link rel="icon" href="About.png" type="image/png">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'GraphikArabic', sans-serif;
+            text-align: center;
+            background-color: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container h1 {
+            font-family: 'Proza', sans-serif;
+            font-size: 50px;
+            text-shadow: 0 6px 8px rgb(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('css/assets/back-button.png');
+            background-color: #1e293b;
+            background-size: cover;
+            text-decoration: none;
+            display: inline-block;
+            top: 20px;
+            left: 25px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 100px;
+        }
+
+        .main-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .main-buttons a {
+            text-decoration: none;
+            margin-top: 20px;
+            width: 250px;
+            height: 60px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #055be6;
+            border-radius: 10px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            gap: 12px;
+        }
+
+        .git-logo.inverted {
+            filter: invert(0%);
+            width: 30px;
+            height: 30px;
+        }
+
+        p.told {
+            word-spacing: 0.1em;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            color: #dddddd;
+            text-align: left;
+            text-align: justify;
+            direction: rtl;
+            text-align-last: left;
+        }
+
+        .link {
+            color: #027ddb;
+            text-decoration: none;
+            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .link:hover {
+            color: #2394ea;
+            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        .light-theme {
+            background-color: #e2e2e2 !important;
+            color: #000000 !important;
+        }
+
+        .light-theme .container {
+            background: #c7c7c7 !important;
+        }
+
+        .light-theme .back-button {
+            background-image: url(css/assets/back-buttonB.png) !important;
+            background-color: #c7c7c7 !important;
+        }
+
+        .light-theme .back-button {
+            color: rgb(0, 0, 0) !important;
+        }
+
+        .light-theme p.told {
+            color: #2b2b2b !important;
+        }
+
+        .light-theme .main-buttons a {
+            color: #2b2b2b !important;
+            background-color: #26a4da !important;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .light-theme .git-logo.inverted {
+            filter: invert(85%) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()"></button>
+        <h1>About Us</h1>
+        <p class="told">
+            This web application project is designed to create an interactive and engaging space for learning and
+            exploring the world of chemical elements. In this virtual lab, we have tried to present the complex concepts
+            related to the atomic structure of elements in a simple and visual language
+        </p>
+        <p class="told">
+            In the Elements Lab, you can easily change the number of protons, neutrons, and electrons of each element
+            and witness the transformation of that element into another. This interactive approach helps you gain a
+            deeper understanding of the periodic table and the relationship between subatomic particles and the identity
+            of elements. Imagine, with just a few clicks, you can visually see how changing the number of protons not
+            only changes the charge of the nucleus but also completely alters the nature of the element
+        </p>
+        <p class="told">
+            This project is the result of the effort and passion of two chemistry enthusiasts, Mohammad Rashnou and
+            Hamidreza Sepahvand. We have created this virtual lab with the aim of facilitating the learning of chemistry
+            concepts for students and science enthusiasts. We hope that the Elements Lab can open a new window to the
+            fascinating and complex world of elements for you and provide you with an enjoyable and educational
+            experience
+        </p>
+        <p class="told">
+            Thank you for choosing the Elements Lab to explore the world of elements! For more information and to view
+            the codes, you can visit <a href="https://github.com/mrmr-711" class="link">Mohammad Rashnou's GitHub
+                repository</a>
+        </p>
+        <div class="main-buttons">
+            <a href="https://github.com/MrMR-711/Web-Chemistry-Lab">Project GitHub Page
+                <img src="css/assets/git-logo.png" alt="Icon" class="git-logo inverted">
+            </a>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = "index";
+        }
+
+        function applyTheme(theme) {
+            const isLightTheme = theme === "light";
+            document.body.classList.toggle("light-theme", isLightTheme);
+
+            const color = isLightTheme ? "#e2e2e2" : "#0f172a"; // رنگ برای حالت روز و شب
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+            document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", theme === "dark" ? "black-translucent" : "default");
+            document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", color);
+            document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", color);
+        }
+
+        // اجرا هنگام بارگذاری صفحه برای اطمینان از اینکه Title Bar همیشه هماهنگ است
+        function loadTheme() {
+            let savedTheme = localStorage.getItem("theme") || "dark";
+            applyTheme(savedTheme);
+        }
+
+        // اجرا هنگام بارگذاری هر صفحه
+        document.addEventListener("DOMContentLoaded", loadTheme);
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) { // اگر صفحه از کش لود شده بود، دوباره تم را اعمال کن
+                loadTheme();
+            }
+        });
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../sw.js')
+                .then(() => console.log("Service Worker ثبت شد."))
+                .catch(err => console.error("خطا در ثبت Service Worker:", err));
+        }
+    </script>
+</body>
+
+</html>

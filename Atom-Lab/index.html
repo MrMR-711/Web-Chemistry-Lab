@@ -1,0 +1,90 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information regarding
+copyright ownership. The ASF licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html lang="فا">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Laboratory</title>
+    <link rel="icon" href="Atom-Lab-icon.png" type="image/png">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="manifest" href="../manifest.json">
+    <link type="text/css" rel="stylesheet" href="css/font.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-navbutton-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()"></button>
+        <h1 style="font-family: 'Proza', sans-serif;">Element Laboratory</h1>
+
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search by name, atomic number, or chemical symbol"
+                style="text-align: left;">
+        </div>
+
+        <div class="slider-container">
+            <label>Proton:</label>
+            <div class="slider-wrapper">
+                <input type="range" id="proton-slider" min="1" max="118" value="1">
+                <input type="number" id="proton-input" min="1" max="118" value="1">
+            </div>
+            <span id="proton-count" class="hidden-text">1</span>
+        </div>
+
+        <div class="slider-container">
+            <label>Neutron:</label>
+            <div class="slider-wrapper">
+                <input type="range" id="neutron-slider" min="0" max="180" value="0">
+                <input type="number" id="neutron-input" min="0" max="180" value="0">
+            </div>
+            <span id="neutron-count" class="hidden-text">0</span>
+        </div>
+
+        <div class="slider-container">
+            <label>Electron:</label>
+            <div class="slider-wrapper">
+                <input type="range" id="electron-slider" min="1" max="118" value="1">
+                <input type="number" id="electron-input" min="1" max="118" value="1">
+            </div>
+            <span id="electron-count" class="hidden-text">1</span>
+        </div>
+
+
+        <div class="element-info">
+            <img id="element-image" src="" alt="?"
+                style="max-width: 100%; height: auto; display: block; margin: 10px 0;">
+            <h2 id="element-name">Hydrogen (H)</h2>
+            <p><strong>Atomic Number:</strong> <span id="atomic-number">1</span></p>
+            <p><strong>Approximate Isotopic Mass:</strong> <span id="isotopic-mass">1</span></p>
+            <p><strong>Standard Atomic Mass:</strong> <span id="atomic-mass">1</span></p>
+            <p><strong>Element Type:</strong> <span id="element-type">Reactive Nonmetals</span></p>
+            <p><strong>Physical State:</strong> <span id="Physical-state">Gas</span></p>
+            <p><strong>Chemical Symbol:</strong> <span id="chemical-symbol">H</span></p>
+        </div>
+
+        <div class="atom" id="atom-model"></div>
+    </div>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
