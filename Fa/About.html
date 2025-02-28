@@ -40,6 +40,17 @@ limitations under the License.
             transition: background-color 0.3s, color 0.3s;
         }
 
+        a:active,
+        a:focus,
+        a:hover {
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         .container {
             max-width: 600px;
             margin: auto;
@@ -76,6 +87,17 @@ limitations under the License.
             margin-bottom: 100px;
         }
 
+        a:active,
+        a:focus,
+        a:hover {
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         .main-buttons {
             display: flex;
             flex-direction: column;
@@ -99,7 +121,7 @@ limitations under the License.
             align-items: center;
             background-color: #055be6;
             border-radius: 10px;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 0 rgb(4, 75, 190), 0 -3px 0 rgb(19, 110, 255);
             gap: 12px;
         }
 
@@ -167,7 +189,7 @@ limitations under the License.
         .light-theme .main-buttons a {
             color: #2b2b2b !important;
             background-color: #26a4da !important;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2) !important;
+            box-shadow: 0 3px 0 rgb(31, 137, 182), 0 -3px 0 rgb(51, 194, 255) !important;
         }
 
         .light-theme .git-logo.inverted {

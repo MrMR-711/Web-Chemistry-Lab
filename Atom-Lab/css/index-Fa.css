@@ -288,13 +288,6 @@ input[type=number] {
     /* تغییر رنگ placeholder */
 }
 
-@media (max-width: 767px) {
-   .search-container ::placeholder {
-        font-size: 9.3px;
-		margin-right: -10px;
-    }
-}
-
 input[type=text] {
     font-family: 'GraphikArabic', sans-serif;
     font-size: 14px;

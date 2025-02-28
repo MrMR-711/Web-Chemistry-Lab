@@ -24,6 +24,18 @@ body {
     padding: 20px;
     text-align: right;
 }
+
+a:active,
+a:focus,
+a:hover {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .container {
 max-width: 600px;
 margin: auto;
@@ -76,7 +88,7 @@ position: relative;
 .main-button-bottom {
     text-decoration: none;
     margin-top: 20px;
-    margin-bottom: 380px;
+    margin-bottom: 365px;
     width: 250px;
     height: 60px;
     font-size: 20px;

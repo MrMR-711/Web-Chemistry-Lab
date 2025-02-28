@@ -40,6 +40,17 @@ limitations under the License.
             transition: background-color 0.3s, color 0.3s;
         }
 
+        a:active,
+        a:focus,
+        a:hover {
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         .container {
             max-width: 600px;
             margin: auto;
@@ -76,6 +87,17 @@ limitations under the License.
             margin-bottom: 100px;
         }
 
+        a:active,
+        a:focus,
+        a:hover {
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         .setting-item {
             margin: 20px 0;
             font-family: 'GraphikArabic', sans-serif;
@@ -98,7 +120,7 @@ limitations under the License.
             background-color: #055be6;
             border: 2px solid #0043af;
             border-radius: 7px;
-            margin-bottom: 560px;
+            margin-bottom: 590px;
         }
 
         select option {
@@ -112,6 +134,7 @@ limitations under the License.
             display: inline-block;
             width: 60px;
             height: 34px;
+            top: -18px;
         }
 
         .switch input {
@@ -269,15 +292,15 @@ limitations under the License.
                 .catch(err => console.error("خطا در ثبت Service Worker:", err));
         }
 
-document.getElementById('language-select').addEventListener('change', function () {
-    var selectedValue = this.value;
-    localStorage.setItem('language', selectedValue); // ذخیره زبان انتخابی
-    if (selectedValue === 'en') {
-        window.location.href = '../settings'; 
-    } else if (selectedValue === 'fa') {
-        window.location.href = 'settings'; 
-    }
-});
+        document.getElementById('language-select').addEventListener('change', function () {
+            var selectedValue = this.value;
+            localStorage.setItem('language', selectedValue); // ذخیره زبان انتخابی
+            if (selectedValue === 'en') {
+                window.location.href = '../settings';
+            } else if (selectedValue === 'fa') {
+                window.location.href = 'settings';
+            }
+        });
     </script>
 </body>
 
