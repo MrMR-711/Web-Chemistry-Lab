@@ -1262,24 +1262,26 @@ function syncSliderAndInput(sliderId, inputId, labelId) {
     input.addEventListener("input", function () {
         console.log("Input input event triggered for inputId:", inputId);
 
-        const inputValue = parseInt(this.value);
+        let inputValue = parseInt(this.value);
         const sliderMin = parseInt(slider.min);
         const sliderMax = parseInt(slider.max);
 
         console.log("Input Value:", inputValue);
         console.log("Slider Min:", sliderMin, "Slider Max:", sliderMax);
 
-        if (!isNaN(inputValue) && inputValue >= sliderMin && inputValue <= sliderMax) {
-            console.log("Input value is within slider range");
-            slider.value = inputValue;
-            label.textContent = inputValue;
-            console.log("Slider value updated to:", slider.value);
-
-            updateElement(); // فراخوانی تابع updateElement بعد از تغییر اینپوت
-        } else {
-            console.error("Input value is OUTSIDE slider range or NaN");
-            // می‌توانید اینجا پیامی به کاربر نمایش دهید اگر مقدار خارج از محدوده بود
+        if (isNaN(inputValue) || inputValue < sliderMin) {
+            inputValue = sliderMin;
+        } else if (inputValue > sliderMax) {
+            inputValue = sliderMax;
         }
+
+        input.value = inputValue;
+        slider.value = inputValue;
+        label.textContent = inputValue;
+
+        console.log("Slider & Input value updated to:", inputValue);
+
+        updateElement(); // فراخوانی تابع updateElement بعد از تغییر اینپوت
     });
 }
 
@@ -1441,12 +1443,14 @@ function drawAtomModel(protons, neutrons, electrons) {
 function searchElement() {
     const query = searchBox.value.trim().toLowerCase();
 
+    let found = false; // برای تشخیص اینکه آیا عنصری یافت شده یا نه
+
     for (const [atomicNumber, element] of Object.entries(elements)) {
         const elementNameLower = element.name.toLowerCase();
         const elementSymbolLower = element.symbol.toLowerCase();
 
         if (
-            atomicNumber === query ||
+            query === atomicNumber ||  // بررسی دقیق شماره اتمی
             elementSymbolLower === query ||  // بررسی دقیق نماد شیمیایی
             elementNameLower.startsWith(query)
         ) {
@@ -1459,8 +1463,21 @@ function searchElement() {
             document.getElementById("electron-input").value = element.requiredElectrons;
 
             updateElement();
+            found = true;
             break;
         }
+    }
+
+    // اگر هیچ عنصری پیدا نشد، عنصر نامشخص نمایش داده شود
+    if (!found) {
+        document.getElementById("atomic-number").innerText = "-";
+        document.getElementById("isotopic-mass").innerText = "-";
+        document.getElementById("atomic-mass").innerText = "-";
+        document.getElementById("element-name").innerText = "عنصر نامشخص (?)";
+        document.getElementById("element-image").src = "../css/assets/elements/question-mark.png";
+        document.getElementById("chemical-symbol").innerText = "?";
+        document.getElementById("element-type").innerText = "-";
+        document.getElementById("Physical-state").innerText = "-";
     }
 }
 
