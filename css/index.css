@@ -24,6 +24,16 @@ body {
     padding: 20px;
     text-align: right;
 }
+a:active,
+a:focus,
+a:hover {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .container {
 max-width: 600px;
 margin: auto;

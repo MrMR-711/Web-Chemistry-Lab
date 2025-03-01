@@ -80,15 +80,15 @@ a:hover {
     margin-bottom: 100px;
 }
 
-a:active, 
-a:focus, 
-a:hover {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+button:active,
+button:focus,
+button:hover {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .slider-container {
