@@ -60,7 +60,7 @@ a:hover {
 
 @media (max-width: 767px) {
     .container h1 {
-        font-size: 33px;
+        font-size: 32px;
     }
 }
 
@@ -331,10 +331,15 @@ input[type="text"]:focus {
     max-width: 300px;
 }
 
-.element-info img {
+.element-image {
     width: 50%;
     height: 50%;
-    align-items: center;
+    align-self: left;
+	justify: left;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-top: 10px;
 }
 
 .element-info h2 {
