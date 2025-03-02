@@ -60,7 +60,7 @@ a:hover {
 
 @media (max-width: 767px) {
     .container h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 }
 
@@ -290,7 +290,7 @@ input[type=number] {
 
 @media (max-width: 767px) {
    .search-container ::placeholder {
-        font-size: 9.3px;
+        font-size: 8.8px;
 		margin-right: -10px;
     }
 }
@@ -347,6 +347,7 @@ input[type="text"]:focus {
 }
 
 .element-info p {
+    font-size: 14px;
     margin: 5px 0;
 }
 

@@ -290,8 +290,7 @@ input[type=number] {
 
 @media (max-width: 767px) {
    .search-container ::placeholder {
-        font-size: 13px;
-		margin-right: -8px;
+        font-size: 11px;
     }
 }
 
