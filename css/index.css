@@ -1,0 +1,129 @@
+/*
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information regarding
+copyright ownership. The ASF licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+body {
+    font-family: 'GraphikArabic', sans-serif;
+    text-align: center;
+    background-color: #0f172a;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: right;
+}
+
+a:active,
+a:focus,
+a:hover {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.container h1 {
+    font-family: 'Estedad-MDarvishi', sans-serif;
+    font-size: 50px;
+    text-shadow: 0 6px 8px rgb(0, 0, 0, 0.2);
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+@media (max-width: 767px) {
+    .container h1 {
+        font-size: 37px;
+    }
+}
+
+.main-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.main-button a {
+    text-decoration: none;
+    margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 96%, 46%);
+    border-radius: 10px;
+    box-shadow: 0 3px 0 rgb(4, 75, 190), 0 -3px 0 rgb(19, 110, 255);
+}
+
+.main-button-bottom {
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 215px;
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #055be6;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 rgb(4, 75, 190), 0 -3px 0 rgb(19, 110, 255);
+}
+
+.light-theme {
+    background-color: #e2e2e2 !important;
+    color: #000000 !important;
+}
+
+.light-theme .container {
+    background: #c7c7c7 !important;
+}
+
+.light-theme .main-button a {
+    color: #2b2b2b !important;
+    background-color: #26a4da !important;
+    box-shadow: 0 3px 0 rgb(37, 148, 178), 0 -3px 0 rgb(52, 183, 243) !important;
+}
+
+.light-theme .main-button-bottom {
+    color: #2b2b2b !important;
+    background-color: #26a4da !important;
+    box-shadow: 0 3px 0 rgb(37, 148, 178), 0 -3px 0 rgb(52, 183, 243) !important;
+}
