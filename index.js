@@ -39,7 +39,7 @@ window.addEventListener("pageshow", function (event) {
 });
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
+  navigator.serviceWorker.register('./sw.js')
     .then(() => console.log("Service Worker ثبت شد."))
     .catch(err => console.error("خطا در ثبت Service Worker:", err));
 }
@@ -47,7 +47,7 @@ if ('serviceWorker' in navigator) {
 document.addEventListener('DOMContentLoaded', function () {
   var savedLang = localStorage.getItem('language');
   if (savedLang === 'fa') {
-    window.location.href = './Fa';
+    window.location.href = './Fa/';
   }
 });
 
