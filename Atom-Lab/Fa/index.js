@@ -1550,3 +1550,17 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log("Service Worker ثبت شد."))
         .catch(err => console.error("خطا در ثبت Service Worker:", err));
 }
+
+function launchFullscreen(element) {
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+}
+
+document.addEventListener('click', () => {
+    launchFullscreen(document.documentElement);
+});

@@ -23,6 +23,7 @@ limitations under the License.
     <meta name="theme-color" content="#0f172a">
     <link rel="manifest" href="manifest.json">
     <link type="text/css" rel="stylesheet" href="css/font.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-navbutton-color" content="#0f172a">
@@ -307,6 +308,21 @@ limitations under the License.
             } else if (selectedValue === 'fa') {
                 window.location.href = './Fa/settings';
             }
+        });
+
+        function launchFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen(); // Safari
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen(); // IE/Edge
+            }
+        }
+
+        // روی تعامل کاربر اجرا کن (مثلاً با کلیک یا لمس)
+        document.addEventListener('click', () => {
+            launchFullscreen(document.documentElement);
         });
     </script>
 </body>
