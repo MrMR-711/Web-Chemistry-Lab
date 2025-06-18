@@ -50,17 +50,3 @@ document.addEventListener('DOMContentLoaded', function () {
     window.location.href = '../';
   }
 });
-
-function launchFullscreen(element) {
-  if (element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if (element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen();
-  } else if (element.msRequestFullscreen) {
-    element.msRequestFullscreen();
-  }
-}
-
-document.addEventListener('click', () => {
-  launchFullscreen(document.documentElement);
-});

@@ -19,11 +19,10 @@ limitations under the License.
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0f172a">
     <link rel="manifest" href="../manifest.json">
     <link type="text/css" rel="stylesheet" href="../css/font.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-navbutton-color" content="#0f172a">
@@ -301,20 +300,6 @@ limitations under the License.
                 .then(() => console.log("Service Worker ثبت شد."))
                 .catch(err => console.error("خطا در ثبت Service Worker:", err));
         }
-
-        function launchFullscreen(element) {
-            if (element.requestFullscreen) {
-                element.requestFullscreen();
-            } else if (element.webkitRequestFullscreen) {
-                element.webkitRequestFullscreen();
-            } else if (element.msRequestFullscreen) {
-                element.msRequestFullscreen();
-            }
-        }
-
-        document.addEventListener('click', () => {
-            launchFullscreen(document.documentElement);
-        });
     </script>
 </body>
 
