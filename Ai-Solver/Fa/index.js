@@ -397,14 +397,47 @@ if ('serviceWorker' in navigator) {
     .catch(err => console.error("خطا در ثبت Service Worker:", err));
 }
 
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 function launchFullscreen(element) {
+  if (!isMobileDevice()) return;
+
   if (element.requestFullscreen) {
     element.requestFullscreen();
   } else if (element.webkitRequestFullscreen) {
     element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
   }
 }
 
+function exitFullscreen() {
+  if (document.fullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  }
+}
+
+const messageInput = document.getElementById('messageInput');
+
+messageInput.addEventListener('focus', () => {
+  if (document.fullscreenElement) {
+    exitFullscreen();
+  }
+});
+
+messageInput.addEventListener('blur', () => {
+});
+
 document.addEventListener('click', () => {
-  launchFullscreen(document.documentElement);
+  if (!document.fullscreenElement) {
+    launchFullscreen(document.documentElement);
+  }
 });
