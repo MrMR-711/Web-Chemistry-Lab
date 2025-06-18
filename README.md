@@ -7,7 +7,7 @@
 
 [![Made with HTML](https://img.shields.io/badge/Made%20with-HTML-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Also uses Kotlin](https://img.shields.io/badge/Also%20uses-Kotlin-purple)](https://kotlinlang.org)
-[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/MrMR-711/Web-Chemistry-Lab/releases)
+[![Version](https://img.shields.io/badge/version-1.2.0_beta-red)](https://mrmr-711.github.io/Web-Chemistry-Lab/Fa)
 [![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Web-brightgreen)](https://github.com/MrMR-711/Web-Chemistry-Lab)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -69,7 +69,7 @@
 
 [![Made with HTML](https://img.shields.io/badge/Made%20with-HTML-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Also uses Kotlin](https://img.shields.io/badge/Also%20uses-Kotlin-purple)](https://kotlinlang.org)
-[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/MrMR-711/Web-Chemistry-Lab/releases)
+[![Version](https://img.shields.io/badge/version-1.2.0_beta-red)](https://mrmr-711.github.io/Web-Chemistry-Lab)
 [![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Web-brightgreen)](https://github.com/MrMR-711/Web-Chemistry-Lab)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
